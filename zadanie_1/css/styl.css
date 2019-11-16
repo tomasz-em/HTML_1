@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.kontener {
+    overflow: auto;
+    background-color: teal;
+}
+
+/* .naglowek {
+    background-color: yellowgreen;
+    padding: 30px 50px;
+    font-size: 3em;
+} */
+
+
+.info {
+    /* background-color: thistle; */
+    float: left;
+    width: 35%;
+    padding-top: 80px;
+} 
+
+.info > img {
+   display: block;
+   /* padding: 50px; */
+   margin: 0 auto;
+   max-width: 350px;
+}
+
+
+.zawartosc {
+    /* background-color: teal; */
+    float: left;
+    width: 60%;
+    padding: 4em;
+    color: white;
+}
+
+.zawartosc > h2 {
+    font-size: 4em;
+}
+.zawartosc > .tytul {
+
+}
+
+.zawartosc button {
+    font-size: 2em;
+}
+
+.zapisy {
+    text-align: right;
+}
+
+.zapisy .odsylacz {
+    background-color: red;
+    padding: 0.5em 1em;
+    display: inline;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+
+.zawartosc .odsylacz a { 
+    color: white;
+}    
+
+.zeruj_float {
+    clear: both;
+}
+
+.stopka {
+    background-color: green;
+    text-align: center;
+    /* padding: 1em 0; */
+    margin-bottom: 1.5em;
+}
+
+.nawigacja {
+    background-color: yellowgreen;
+}
+
+.nawigacja ul {
+    list-style: none;
+    background-color: #green;
+    /* padding: 1em; */
+}
+
+.nawigacja li {
+    /* background-color: #ccc; */
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-size: 1.3em;
+}
+
