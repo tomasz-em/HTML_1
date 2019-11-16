@@ -3,8 +3,8 @@
 
 ___
 
-### Wykonywanie prostych statycznych stron w HTMLu z użyciem podstawowych elementów HTML oraz niezbędnego użycia stylów. 
-Użycie istotnych elementów blokowych oraz liniowych celem wykonania odwzorowania układu ze zrzutu graficznego. 
+### Wykonywanie prostych statycznych stron w HTMLu z użyciem podstawowych elementów strukturalnych oraz odwołania się do stylów. 
+Użycie istotnych elementów blokowych oraz liniowych celem wykonania odwzorowania układu ze zrzutu graficznego. Wykorzystanie zewnętrznych arkuszy stylów.
 ___
 
 ## Zadanie 1 - _strona głowna_
