@@ -1,3 +1,5 @@
+/*  OGÓLNE ELEMENTY */
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap');
 
 * {
@@ -10,8 +12,8 @@ body {
     padding: 0;
     background-color: #5bc26a;
     background: -moz-linear-gradient(90deg, #5bc26a 0%, #00b0d4 100%);
-    background: -webkit-linear-gradient(90deg,  #5bc26a 0%, #00b0d4 100%);
-    background: linear-gradient(90deg,  #5bc26a 0%, #00b0d4 100%);
+    background: -webkit-linear-gradient(90deg, #5bc26a 0%, #00b0d4 100%);
+    background: linear-gradient(90deg, #5bc26a 0%, #00b0d4 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5bc26a",endColorstr="#00b0d4",GradientType=1);   /*  a la gradienmt w IE6+ */
 }
 
@@ -22,36 +24,111 @@ h1 {
     /* margin: 0 auto; */
     text-align: center;
     font-weight: 400;
+    margin: 0.25em;
 }
 
+hr {
+    margin: 3em;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* TABELE ORAZ ICH WARIANTY */
+
 table {
-    /* background-color: white; */
-    /* padding: 1em; */
     width: 100%;
+    border-collapse: collapse;  /* zwarte kolumny i komórki, zamiast domyślnej przerwy z SEPARATE */
+    table-layout: fixed;
+    color: white;
+    margin: 0 auto;
     border: 1px solid #ddd;
+    border-color: rgba(255, 255, 255, 0.4);     /* ten sam kolor co ma tło nagłówka tabeli */
+    text-shadow: 0px 0px 2px #000;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.tabela_blokowa {
+    width: 1250px;    /* wartości bezwględne w px */
+}
+
+.tabela_danych {        /* TE ATRYBUTY NIE DZIAŁAJĄ NA TABELE! ... ogólni ta klasa nie będzie potrzebna  */
+    max-height: 350px;
+    overflow-y: scroll;
 }
 
 td,
 th {
-    /* width: 50%; */
+    /* width: 20%; */ /* równe 1/5 szerokości dla każdej z kolumn */
     padding: 1em;
-    border: 1px solid #ddd;
+        /* border: 1px solid #ddd; */
     text-align: center;
 }
 
 th {
     font-weight: bolder;
-    border-bottom-color: #999;  /* !!! to jest rozszerzenie, którego nie ma w wizualizacji zadania !!! */
 }
 
 thead > tr {
     background-color: #2db9a0;
     background-color:rgba(255, 255, 255, 0.4);
     font-variant: small-caps;
-    color: white;
 }
 
-.kontener {
-    margin: 10vh 10vw;    /* wybrane w ciemno ustawienie działa dobrze dla ekranów 16:9 (przetwstowane w ich wielokrotności o 100px) */
+tbody {
+    max-height: 350px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tabela_blokowa tbody {
+    display: block;
+    width: 100%;
+    width: 1249px;  /* 1px na stratę ramki tabeli, aby nie wyjeżdzał przez to pionowy pasek przewijania */
+}
+
+.tabela_blokowa tbody td {
+    width: 250px;
+}
+
+tbody > tr {     /* dodano :NOT(:LAST-OF-TYPE) aby nie kolorować linii pod OSTATNIM elementem (ewentualmie osobną regułą usunąć ostatni wiersz) */
+    /* border: 1px solid #666; */
+    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tabela_blokowa tbody > tr {
+    display: block;     /*   */
+    width: 1250px; 
+    width: 100%; 
+}
+
+tbody > tr:last-of-type {
+    /* border-bottom-style: none; */
+    border-bottom-style: none;
+}
+
+caption {
+    caption-side: bottom;
+    margin: 0.5em 1em;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.kontener_tabeli:first-of-type table > caption {    /* mały potworek, ale jak inaczej wybrać opis z pierwszej tabeli (każda jest otoczona DIVem o konkretnytch pionowych wymirach) */
+    caption-side: top;
+}
+
+/*  KONKRETNE POJEMNIKI  */
+
+.kontener_strony {
+    margin: 10vh 5vw;    /* wybrane w ciemno ustawienie działa dobrze dla ekranów 16:9 (przetwstowane w ich wielokrotności o 100px) */
+}
+
+.kontener_tabeli {
+    max-height: 350px;
+    max-width: 1250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 auto;
 }
 
