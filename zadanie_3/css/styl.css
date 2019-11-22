@@ -11,8 +11,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #5bc26a;
-    background: -moz-linear-gradient(90deg, #5bc26a 0%, #00b0d4 100%);
-    background: -webkit-linear-gradient(90deg, #5bc26a 0%, #00b0d4 100%);
+    background: -moz-linear-gradient(to right, #5bc26a 0%, #00b0d4 100%);
+    background: -webkit-linear-gradient(left, #5bc26a 0%, #00b0d4 100%);
     background: linear-gradient(90deg, #5bc26a 0%, #00b0d4 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5bc26a",endColorstr="#00b0d4",GradientType=1);   /*  a la gradienmt w IE6+ */
 }
@@ -24,7 +24,7 @@ h1 {
     /* margin: 0 auto; */
     text-align: center;
     font-weight: 400;
-    margin: 0.25em;
+    margin: 0.2em;
 }
 
 hr {
@@ -37,17 +37,17 @@ hr {
 table {
     width: 100%;
     border-collapse: collapse;  /* zwarte kolumny i komórki, zamiast domyślnej przerwy z SEPARATE */
-    table-layout: fixed;
+    table-layout: fixed;    /* wprowadza LEPSZY układ kolumnowy */
     color: white;
     margin: 0 auto;
-    border: 1px solid #ddd;
-    border-color: rgba(255, 255, 255, 0.4);     /* ten sam kolor co ma tło nagłówka tabeli */
     text-shadow: 0px 0px 2px #000;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
 }
 
 .tabela_blokowa {
-    width: 1250px;    /* wartości bezwględne w px */
+    width: 1250px;    /* wymagane wartości bezwględne w px */
+    border: 1px solid #ddd;
+    border-color: rgba(255, 255, 255, 0.4);     /* ten sam kolor co ma tło nagłówka tabeli */
 }
 
 .tabela_danych {        /* TE ATRYBUTY NIE DZIAŁAJĄ NA TABELE! ... ogólni ta klasa nie będzie potrzebna  */
@@ -59,7 +59,6 @@ td,
 th {
     /* width: 20%; */ /* równe 1/5 szerokości dla każdej z kolumn */
     padding: 1em;
-        /* border: 1px solid #ddd; */
     text-align: center;
 }
 
@@ -92,7 +91,7 @@ tbody {
 
 tbody > tr {     /* dodano :NOT(:LAST-OF-TYPE) aby nie kolorować linii pod OSTATNIM elementem (ewentualmie osobną regułą usunąć ostatni wiersz) */
     /* border: 1px solid #666; */
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #ddd;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -114,10 +113,6 @@ caption {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.kontener_tabeli:first-of-type table > caption {    /* mały potworek, ale jak inaczej wybrać opis z pierwszej tabeli (każda jest otoczona DIVem o konkretnytch pionowych wymirach) */
-    caption-side: top;
-}
-
 /*  KONKRETNE POJEMNIKI  */
 
 .kontener_strony {
@@ -130,5 +125,22 @@ caption {
     overflow-y: auto;
     overflow-x: hidden;
     margin: 0 auto;
+    border: 1px solid #ddd;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
+.kontener_tabeli:first-of-type {
+    border-width: 0px;      /* wyłączenie obrysu dla kontenera tabeli (tylko dla pierwszego wystąpienia - "nagłówka") */
+}
+
+.kontener_tabeli:first-of-type table { 
+    border-width: 0px;      /* wyłączenie obrysu dla tabeli wewnątrz pierwszego kontenera tabeli(z "nagłówkiem") */
+}
+
+.kontener_tabeli:first-of-type table > caption {    /* mały potworek, ale jak inaczej wybrać opis z pierwszej tabeli (każda jest otoczona DIVem o konkretnytch pionowych wymirach) */
+    caption-side: top;
+}
+
+.kontener_tabeli:last-of-type {     
+    margin-bottom: 3em;     /* mniejsza przestrzeń na spodzie strony pod tabelą, dla starych przeglądarke, co nie ogarniają VH */
+}

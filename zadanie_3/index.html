@@ -17,7 +17,7 @@
                 Operowanie na <strong>elementach blokowych działa tylko dla tabel zwymiarowanych bezwzględnie</strong>, czyli z określoną 
                 <strong>całkowitą szerokością</strong> <br />
                 oraz z narzuconą szerokością komórek (kolumn) w <strong>px</strong>! Wiersze tabeli nie muszą być wymiarowane.<br />
-                <strong>(+)</strong>: jest to wykonalne, ale wymaga eksperymentów ze stylami; opis tabeli nie jest częścią danych do przewijania <br /> 
+                <strong>(+)</strong>: jest to wykonalne, ale wymaga eksperymentów ze stylami i trikami CSSa; opis tabeli nie jest częścią danych do przewijania <br /> 
                 <strong>(-): dodatkowe stylowanie oraz anomalie DOLNEGO obrysu tabeli poza pierwszą kolumną w IE i Chrome (FF jakoś to naprawia wewnętrznie).</strong>
             </caption>
             <thead>
@@ -285,7 +285,7 @@
 
         <div class="kontener_tabeli">
             <table>
-                <caption>Wyświetlaną jedną tabelę tworzą razem dwie tabele &mdash; osobno dla nagłówka i druga dla danych (z tym opisem). Obie znajdują sie w wymiarowanch kontenerach.<br />
+                <caption>Wyświetlana jako jedna tabela, ale tworzą ją razem dwie &mdash; osobno dla nagłówka i druga dla danych (z tym opisem). Obie znajdują sie w wymiarowanch kontenerach.<br />
                     <strong>(+)</strong>: kontener na drugą tabele i mniej zabawy z tabelami i ich elementami<br />
                     <strong>(-)</strong>: RACZEJ BRAK; przewijany jest także opis tabeli (zalecane użycie innego elementu z tą zawartością ZA tabelą) oraz obrysu dla kontenera ograniczającego
                 </caption>
@@ -302,7 +302,7 @@
         </div>
         <div class="kontener_tabeli">
             <table class="tabela_danych">
-                <caption>Ten opis tabeli jest przewijalny, tak samo jak treści tabeli, do której przynależy.
+                <caption>Ten opis tabeli jest <strong>przewijalny</strong>, razem z treściami tabeli, do której przynależy.
                 </caption>
     
                 <tbody>
