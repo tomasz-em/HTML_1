@@ -14,24 +14,23 @@ body {
 .glowny_kontener {
     max-width: 1000px;
     overflow: auto;
-    background-color: lightblue;
     border-radius: 5px;
     border: 1px #ddd solid;
     margin: 20px auto;
     box-shadow: 0px 0px 10px #eee;
-        background-color: #ebdada;  /* testowy */ 
+        /* background-color: #ebdada; */ /* testowy */ 
 }
 
 .naglowek {
 
     /* overflow: auto; */
-        background-color: khaki;    /* testowy */ 
+        /* background-color: khaki; */   /* testowy */ 
 }
 
 
 .nawigacja {
     /* float: right; */
-        background-color: yellowgreen;  /* testowy */ 
+        /* background-color: yellowgreen; */  /* testowy */ 
 }
 
 .nawigacja a {
@@ -43,14 +42,14 @@ body {
 .nawigacja > div {
     overflow: auto;     /* kontener na float w górnej liście nawigacyjnej */
     padding: 1em;
-        background-color: lightgoldenrodyellow; /* testowy */ 
+        /* background-color: lightgoldenrodyellow; */ /* testowy */ 
 }
 
 .nawigacja .logo {
     float: left;
     line-height: 0px;  /* bez tego lub mniejsze niż 19px - pojawia się obrys tła pod obrazkiem (jakiś padding tekstowy do obrazka) */
     /* padding: 1em; */
-        background-color: tomato;   /* testowy */ 
+        /* background-color: tomato; */  /* testowy */ 
 }
 
 .nawigacja .logo > img {
@@ -64,7 +63,7 @@ body {
     margin: 0;
     padding-left: 0px;      /* reset lewego wcięcia dla kontenera listy*/
     /* padding: 1em; */
-        background-color: violet;   /* testowy */ 
+        /* background-color: violet; */  /* testowy */ 
 }
 
 .nawigacja li {
@@ -73,11 +72,11 @@ body {
     padding: 1em 0em;
     /* font-size: 1.3em; */
     color: #333;
-    background-color: #ccc;
+    background-color: white;    /* ten kolor powinien być nadawany */
 }
 
 .nawigacja li:hover {
-    color: #ccc;        /* tutaj definicja koloru tektu oraz tła dla elementu oraz potomnego odnośnika */
+    color: white;        /* tutaj definicja koloru tektu oraz tła dla elementu oraz potomnego odnośnika */
     background-color: #333;     /* kolor tła do wykorzystania tylko w elemencie listy */
 }
 
@@ -97,19 +96,19 @@ body {
 
 
 
-.nawigacja li:hover > a {
+/* .nawigacja li:hover > a {
     color: #ccc;
-}
+} */
 
 
 .obraz_naglowka {
     height: 280px;
     width: 100%;
-    background-color: lightgrey;
+        /* background-color: lightgrey; */   /* testowy */
     background: url('../assets/img/NYC-fire-escape-east-side.jpg') no-repeat;
     background-size: cover;     /* wypełnij względem obu wymiarów, zostawiając więcej miejsca poza obszarem "bliższym"*/
     background-position-y: -430px;     /* wzięte z powietrza, ale obrazek ma około 1.1k x 500px */
-    opacity: 0.8;   /* odgórne odebranie przy */
+    opacity: 0.75;   /* odgórne odebranie "przyciągania uwagi" */
 }
 
 main {
@@ -118,7 +117,7 @@ main {
     max-width: 740px;
     padding: 2em;
     border-right: 1px solid lightgray;  /* ten kontener jest wyższy,zatem będzie "miedzą" z paskiem bocznym */
-        background-color: mediumturquoise;  /* testowy */ 
+        /* background-color: mediumturquoise; */  /* testowy */ 
 }
 
 main > h1 {
@@ -139,7 +138,7 @@ aside {
     max-width: 250px;
     padding: 1em;
     overflow: hidden;   /* na rzecz kolejnego obrazka */
-        background-color: thistle;  /* testowy */ 
+        /* background-color: thistle; */ /* testowy */ 
 } 
 
 aside > img {
@@ -178,9 +177,7 @@ aside > ul > li:before {
     text-align: center;
     padding: 1em;
     border-top: 1px solid lightgrey;
-        background-color: lightgreen;
-    /* padding-bottom: 1em 0; */
-    /* margin-bottom: 1.5em; */
+        /* background-color: lightgreen; */  /* testowy */
 }
 
 
