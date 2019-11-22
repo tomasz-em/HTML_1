@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fefefe;
+}
+
+.glowny_kontener {
+    max-width: 1000px;
+    overflow: auto;
+    background-color: lightblue;
+    border-radius: 5px;
+    border: 1px #666 solid;
+    margin: 20px auto;
+        background-color: #ebdada;
+}
+
+.naglowek {
+    padding: 10px;
+    font-size: 1.2em;
+    overflow: auto;
+        background-color: khaki;
+
+}
+
+.naglowek .logo {
+    float: left;
+    padding: 1em;
+        background-color: tomato;
+}
+.nawigacja {
+    float: right;
+    overflow: auto;
+        background-color: yellowgreen;
+}
+
+.nawigacja ul {
+    list-style: none;
+       /* padding: 1em; */
+    float: right;
+    margin: 0;
+        background-color: violet;
+}
+
+.nawigacja li {
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-size: 1.3em;
+        background-color: #ccc;
+}
+
+
+.info {
+    float: left;
+    width: 25%;
+        background-color: thistle;
+} 
+
+.info > img {
+   display: block;
+   padding: 50px;
+   margin: 0 auto;
+   max-width: 350px;
+}
+
+
+.zawartosc {
+    float: left;
+    width: 75%;
+    padding: 4em;
+        background-color: mediumturquoise;
+}
+
+.zawartosc > h2 {
+    font-size: 2.5em;
+}
+.zawartosc > .tytul {
+
+}
+
+.zawartosc button {
+    font-size: 2em;
+}
+
+.zapisy {
+    text-align: right;
+}
+
+.zapisy .odsylacz {
+    padding: 0.5em 1em;
+    display: inline;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25em;
+        background-color: red;
+}
+
+
+.zawartosc .odsylacz a { 
+    color: white;
+}    
+
+.zeruj_float {
+    clear: both;
+}
+
+.stopka {
+    text-align: center;
+    padding: 1em;
+        background-color: lightgreen;
+    /* padding-bottom: 1em 0; */
+    /* margin-bottom: 1.5em; */
+}
+
+
+
