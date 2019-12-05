@@ -10,15 +10,36 @@ body {
     padding: 0;
     background-color: #fefefe;
 }
+a {
+    color: inherit;
+    text-decoration-line: none;
+}
+
+a:hover
+{
+    text-decoration-line: underline;
+
+}
+a:focus {
+outline: 2px solid tomato;
+text-decoration-line: underline;
+}
 
 .glowny_kontener {
     max-width: 1000px;
-    overflow: auto;
+    /* overflow: auto; */   /* już niepotrzebne, skoro nowe dziecko ".tresci_glowne" jest kontenerem na zawartość z float  */
     border-radius: 5px;
     border: 1px #ddd solid;
     margin: 20px auto;
     box-shadow: 0px 0px 10px #eee;
+
         /* background-color: #ebdada; */ /* testowy */ 
+}
+
+.tresci_glowne {
+    overflow: auto;    
+    background-color: #f7f7f7;      /*  specjalnie użyto nowego pojemnika, by bez flexboxa zmienić kolor tła dla bezpośredniego kontenera z floatami */
+
 }
 
 .naglowek {
@@ -117,6 +138,7 @@ main {
     max-width: 740px;
     padding: 2em;
     border-right: 1px solid lightgray;  /* ten kontener jest wyższy,zatem będzie "miedzą" z paskiem bocznym */
+    background-color: #fff;
         /* background-color: mediumturquoise; */  /* testowy */ 
 }
 
@@ -141,7 +163,7 @@ aside {
         /* background-color: thistle; */ /* testowy */ 
 } 
 
-aside > img {
+aside > a > img {
    /* padding: 50px; */
    /* margin: 0 auto; */
    float: left;
